@@ -155,3 +155,44 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
+/* 表头和单元格样式 */
+th, td {
+    border: 1px solid #ccc;
+    padding: 12px; /* 增加 padding 以增加行间距 */
+    vertical-align: middle; /* 垂直居中 */
+}
+
+/* 表头背景颜色 */
+thead th {
+    background-color: #f3f3f3;
+}
+
+/* Proprietary 和 Open-source 分组行样式 */
+.opensource {
+    background-color: #ccecfb;
+    font-weight: bold;
+    text-align: center;
+    font-family: Georgia;
+    font-size: larger;
+}
+.proprietary {
+    background-color: rgba(250, 228, 88, 0.24);
+    font-weight: bold;
+    text-align: center;
+    font-family: Georgia;
+    font-size: larger;
+}
+
+.row-name {
+    font-weight: bold;
+    text-align: center;
+    font-size: larger;
+}
+
+.medal {
+    width: 25px; /* 根据需要调整图标大小 */
+    height: auto;
+    vertical-align: middle;
+    margin-left: 5px; /* 添加一点左边距使图标与文本之间有间隔 */
+}
