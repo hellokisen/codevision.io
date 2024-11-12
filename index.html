@@ -260,7 +260,7 @@
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           <h2 class="title is-3">Abstract</h2>
-          <div class="content has-text-justified">
+          <div class="content has-text-justified" style="width: 100%; margin: 0 auto;">
             <p>
               We present <b><span style="font-size: 1.3em">C</span><span style="font-size: 0.9em">ODE-</span><span
                   style="font-size: 1.3em">V</span><span style="font-size: 0.9em">ISION</span></b>, a benchmark designed
@@ -290,6 +290,10 @@
   </section>
 
   <section>
+<!--添加标题行-->
+    <div style="width: 80%; margin: 0 auto;">
+      <h1 class="title is-2" align="center" style="margin-bottom: 20px">LeaderBoard on CodeVision</h1>
+    </div>
     <div style="width: 80%; margin: 0 auto;">
       <table border="1" style="width: 100%; border-collapse: collapse; text-align: center;">
         <thead>
@@ -301,8 +305,6 @@
             <th rowspan="2" style="line-height: 10em">Avg.</th>
           </tr>
           <tr style="background-color: #f3f3f3;">
-            <!--            <th></th>-->
-            <!--            <th>HumanEval-V-MASK</th>-->
             <th>Easy</th>
             <th>Medium</th>
             <th>Hard</th>
@@ -323,7 +325,6 @@
               <img src="./static/images/gold-medal.png" alt="medal" class="medal">
             </td>
             <td>94.5</td>
-            <!--            <td>91.5</td>-->
             <td>91.1</td>
             <td>89.3</td>
             <td>79.3</td>
@@ -335,7 +336,25 @@
             <td>91.5</td>
           </tr>
           <tr>
-            <td class="row-name">Claude 3.5 Sonnet 20240620</td>
+            <td class="row-name" style="color: #cc0f35">Gemini 1.5 Pro (May 2024)
+              <img src="./static/images/silver-medal.png" alt="medal" class="medal">
+            </td>
+            <!--            <td></td>-->
+            <td>89.6</td>
+            <td>88.9</td>
+            <td>72.0</td>
+            <td>44.8</td>
+            <td>71.8</td>
+            <td>95.6</td>
+            <td>92.5</td>
+            <td>57.5</td>
+            <td>82.4</td>
+            <td>81.3</td>
+          </tr>
+          <tr>
+            <td class="row-name" style="color: #cc0f35">Claude 3.5 Sonnet 20240620
+              <img src="static/images/bronze-medal.png" alt="medal" class="medal">
+            </td>
             <td>82.3</td>
             <!--            <td></td>-->
             <td>84.4</td>
@@ -390,20 +409,7 @@
             <td>50.4</td>
             <td>37.0</td>
           </tr>
-          <tr>
-            <td class="row-name">Gemini 1.5 Pro (May 2024)</td>
-            <!--            <td></td>-->
-            <td>89.6</td>
-            <td>88.9</td>
-            <td>72.0</td>
-            <td>44.8</td>
-            <td>71.8</td>
-            <td>95.6</td>
-            <td>92.5</td>
-            <td>57.5</td>
-            <td>82.4</td>
-            <td>81.3</td>
-          </tr>
+
           <tr>
             <td class="row-name">Gemini 1.5 Flash (April 2024)</td>
             <!--            <td></td>-->
@@ -494,20 +500,6 @@
             <td>22.4</td>
             <td>27.8</td>
           </tr>
-          </tr>
-          <tr>
-            <td class="row-name">InternVL2-Pro 申请中</td>
-            <!--            <td></td>-->
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
           </tr>
           <tr>
             <td class="row-name">Qwen-VL-Plus</td>
