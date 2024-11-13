@@ -559,6 +559,51 @@
       </div>
     </div>
   </section>
+  <!-- 数据集展示模块 -->
+   <section class="section" id="DatasetShowcase">
+    <div class="container" style="max-width: 80%;">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full">
+          <h2 class="title is-3">Dataset Showcase</h2>
+          <!-- 修改后的轮播图容器 -->
+          <div class="slider-container" style="width: 100%; margin: 2rem auto; overflow: hidden; position: relative; padding: 20px;">
+            <!-- 轮播图容器 -->
+            <div class="slider-wrapper" style="display: flex; transition: transform 0.5s ease;">
+              <div class="slide" style="min-width: 100%; flex-shrink: 0; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <img src="./static/images/HumanEval-83.png" alt="dataset showcase" style="max-width: 90%; max-height: 500px; object-fit: contain;">
+                <p style="text-align: center; color: #2c3e50; font-size: 1.1rem; margin-top: 1rem;">
+                  <span style="font-weight: bold;">Figure 1: A sample problem from HumanEval-V.</span>
+                </p>
+              </div>
+              <div class="slide" style="min-width: 100%; flex-shrink: 0; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <img src="./static/images/HumanEval-88.png" alt="showcase 2" style="max-width: 90%; max-height: 500px; object-fit: contain;">
+                <p style="text-align: center; color: #2c3e50; font-size: 1.1rem; margin-top: 1rem;">
+                  <span style="font-weight: bold;">Figure 2: Another sample problem from HumanEval-V.</span>
+                </p>
+              </div>
+              <div class="slide" style="min-width: 100%; flex-shrink: 0; display: flex; justify-content: center; align-items: center;">
+                <img src="./static/images/biweekly-contest-118-maximize-area-of-square-hole-in-grid.png" alt="showcase 3" style="max-width: 90%; max-height: 500px; object-fit: contain;">
+              </div>
+              <div class="slide" style="min-width: 100%; flex-shrink: 0; display: flex; justify-content: center; align-items: center;">
+                <img src="./static/images/3116. Kth Smallest Amount With Single Denomination Combination.png" alt="showcase 4" style="max-width: 90%; max-height: 500px; object-fit: contain;">
+              </div>
+            </div>
+            
+            <!-- 导航按钮 -->
+            <button class="slider-button prev" style="position: absolute; left: 20px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.3); border: none; border-radius: 50%; width: 40px; height: 40px; cursor: pointer; color: white;">❮</button>
+            <button class="slider-button next" style="position: absolute; right: 20px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.3); border: none; border-radius: 50%; width: 40px; height: 40px; cursor: pointer; color: white;">❯</button>
+            
+            <!-- 指示点 -->
+            <div class="slider-dots" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); display: flex; gap: 10px;">
+              <span class="dot active" style="width: 8px; height: 8px; background: #333; border-radius: 50%; cursor: pointer;"></span>
+              <span class="dot" style="width: 8px; height: 8px; background: rgba(0,0,0,0.3); border-radius: 50%; cursor: pointer;"></span>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+   </section>
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
@@ -602,6 +647,53 @@
       </div>
     </div>
   </footer>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const sliderWrapper = document.querySelector('.slider-wrapper');
+    const slides = document.querySelectorAll('.slide');
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
+    const dots = document.querySelectorAll('.dot');
+    let currentIndex = 0;
+
+    // 更新轮播图位置
+    function updateSlider() {
+      sliderWrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+      // 更新指示点状态
+      dots.forEach((dot, index) => {
+        dot.style.background = index === currentIndex ? '#fff' : 'rgba(255,255,255,0.5)';
+      });
+    }
+
+    // 下一张
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % slides.length;
+      updateSlider();
+    }
+
+    // 上一张
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      updateSlider();
+    }
+
+    // 绑定按钮事件
+    nextButton.addEventListener('click', nextSlide);
+    prevButton.addEventListener('click', prevSlide);
+
+    // 绑定指示点事件
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        currentIndex = index;
+        updateSlider();
+      });
+    });
+
+    // 可选：自动轮播
+    // setInterval(nextSlide, 5000);
+  });
+  </script>
 
 </body>
 
