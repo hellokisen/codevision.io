@@ -153,17 +153,15 @@
             <div style="text-align: justify; line-height: 1.8; color: #2c3e50; font-size: 1.2rem;">
               <p style="margin-bottom: 1.5rem;">
                 We present <b style="color: #1a73e8;"><span style="font-size: 1.3em">C</span><span style="font-size: 0.9em">ODE-</span><span style="font-size: 1.3em">V</span><span style="font-size: 0.9em">ISION</span></b>, a benchmark designed to evaluate the logical understanding and reasoning capabilities of Multimodal Large Language Models (MLLMs) through code generation.
-              </p>
-              
-              <p style="margin-bottom: 1.5rem;">
                 <b style="color: #1a73e8;"><span style="font-size: 1.3em">C</span><span style="font-size: 0.9em">ODE-</span><span style="font-size: 1.3em">V</span><span style="font-size: 0.9em">ISION</span></b> challenges MLLMs to generate a correct program that fulfills specific functionality requirements based on a given flowchart, which visually represents the desired algorithm or process.
-              </p>
-              
-              <p style="margin-bottom: 1rem;">
                 <b style="color: #1a73e8;"><span style="font-size: 1.3em">C</span><span style="font-size: 0.9em">ODE-</span><span style="font-size: 1.3em">V</span><span style="font-size: 0.9em">ISION</span></b> comprises three subsets—HumanEval-V, Algorithm, and MATH—which evaluate MLLMs' reasoning abilities across basic programming, algorithmic, and mathematical problem-solving domains.
+                Our experiments evaluate 12 MLLMs on <b style="color: #1a73e8;"><span style="font-size: 1.3em">C</span><span style="font-size: 0.9em">ODE-</span><span style="font-size: 1.3em">V</span><span style="font-size: 0.9em">ISION</span></b>. Experimental results demonstrate that there is a large performance difference between proprietary and open-source models. On hard problems, GPT-4o achieves a 79.3% pass@1, while the best open-source model only achieves 15%.
+                Further experiments reveal that <b style="color: #1a73e8;"><span style="font-size: 1.3em">C</span><span style="font-size: 0.9em">ODE-</span><span style="font-size: 1.3em">V</span><span style="font-size: 0.9em">ISION</span></b> poses unique challenges compared to other multimodal reasoning benchmarks, such as MMCode and MathVista. We also investigate the reasons behind the poor performance of open-source models.
+                All of our source codes and data will be released via GitHub.
               </p>
             </div>
           </div>
+
         </div>
       </div>
       <!--/ Abstract. -->
@@ -206,16 +204,16 @@
             <td class="row-name" style="color: #cc0f35">GPT-4o
               <img src="./static/images/gold-medal.png" alt="medal" class="medal">
             </td>
-            <td>94.5</td>
-            <td>91.1</td>
-            <td>89.3</td>
-            <td>79.3</td>
-            <td>87.9</td>
-            <td>100.0</td>
-            <td>97.5</td>
-            <td>77.5</td>
-            <td>92.0</td>
-            <td>91.5</td>
+            <td><b>94.5</b></td>
+            <td><b>91.1</b></td>
+            <td><b>89.3</b></td>
+            <td><b>79.3</b></td>
+            <td><b>87.9</b></td>
+            <td><b>100.0</b></td>
+            <td><b>97.5</b></td>
+            <td><b>77.5</b></td>
+            <td><b>92.0</b></td>
+            <td><b>91.5</b></td>
           </tr>
           <tr>
             <td class="row-name" style="color: #cc0f35">Gemini 1.5 Pro (May 2024)
@@ -299,6 +297,19 @@
             <td colspan="12" class="opensource">Open-source Models</td>
           </tr>
           <tr>
+            <td class="row-name">Llama-3.2-90B-Vision-Instruct</td>
+            <td><b>40.9</b></td>
+            <td>17.8</td>
+            <td>8.0</td>
+            <td>0.0</td>
+            <td>9.4</td>
+            <td><b>80.0</b></td>
+            <td><b>75.5</b></td>
+            <td><b>15.0</b></td>
+            <td><b>57.6</b></td>
+            <td><b>36.9</b></td>
+          </tr>
+          <tr>
             <td class="row-name">Llama-3.2-11B-Vision-Instruct</td>
             <td>29.3</td>
             <!--            <td>30.5</td>-->
@@ -312,19 +323,7 @@
             <td>32.0</td>
             <td>23.8</td>
           </tr>
-          <tr>
-            <td class="row-name">Llama-3.2-90B-Vision-Instruct</td>
-            <td>40.9</td>
-            <td>17.8</td>
-            <td>8.0</td>
-            <td>0.0</td>
-            <td>9.4</td>
-            <td>80.0</td>
-            <td>75.5</td>
-            <td>15.0</td>
-            <td>57.6</td>
-            <td>36.9</td>
-          </tr>
+
           <tr>
             <td class="row-name">Phi-3-vision-128k-instruct</td>
             <td>29.3</td>
@@ -354,10 +353,10 @@
           <tr>
             <td class="row-name">MiniCPM-V 2.6</td>
             <td>40.2</td>
-            <td>22.2</td>
-            <td>9.3</td>
+            <td><b>22.2</b></td>
+            <td><b>9.3</b></td>
             <td>0.0</td>
-            <td>11.4</td>
+            <td><b>11.4</b></td>
             <td>46.7</td>
             <td>15.0</td>
             <td>2.5</td>
@@ -482,14 +481,14 @@
       <!--/ Dataset Overview -->
     </div>
   </section>
-<!-- 新建一个DatasetComparsion的section -->
-  <section class="section" id="DatasetComparsion">
+<!-- 新建一个DatasetConstruction的section -->
+  <section class="section" id="DatasetConstruction">
     <div class="container" style="max-width: 80%;">
       <div class="columns is-centered has-text-centered">
         <div class="column is-full">
-          <h2 class="title is-3">Dataset Comparsion</h2>
+          <h2 class="title is-3">Dataset Construction</h2>
           <!-- 在这里添加一个图片美观展示 -->
-          <img src="./static/images/motivation.png" alt="dataset comparision" style="width: 50%; height: auto;">
+          <img src="./static/images/construction.png" alt="dataset construction" style="width: 80%; height: auto;">
           <!-- 添加图片标题 -->
           <p style="text-align: center; margin-top: 1rem; color: #2c3e50; font-size: 1.1rem;" ><span style="font-weight: bold;">Figure 1: The comparison of the dataset between CODE-VISION and MMCode.</span></span></p>
         </div>
@@ -507,27 +506,39 @@
             <!-- 轮播图容器 -->
             <div class="slider-wrapper" style="display: flex; transition: transform 0.5s ease;">
               <div class="slide" style="min-width: 100%; flex-shrink: 0; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-                <img src="./static/images/HumanEval-83.png" alt="dataset showcase" style="max-width: 90%; max-height: 500px; object-fit: contain;">
+                <img src="./static/images/HumanEval-93.png" alt="dataset showcase" style="max-width: 90%; max-height: 500px; object-fit: contain;">
                 <p style="text-align: center; color: #2c3e50; font-size: 1.1rem; margin-top: 1rem;">
-                  <span style="font-weight: bold;">Figure 2: A sample problem from HumanEval-V:HumanEval-83.</span>
+                  <span style="font-weight: bold;">Figure 2: A sample problem from HumanEval-V: HumanEval-93.</span>
                 </p>
               </div>
               <div class="slide" style="min-width: 100%; flex-shrink: 0; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-                <img src="./static/images/HumanEval-88.png" alt="showcase 2" style="max-width: 90%; max-height: 500px; object-fit: contain;">
+                <img src="./static/images/HumanEval-94.png" alt="showcase 2" style="max-width: 90%; max-height: 500px; object-fit: contain;">
                 <p style="text-align: center; color: #2c3e50; font-size: 1.1rem; margin-top: 1rem;">
-                  <span style="font-weight: bold;">Figure 3: A sample problem from HumanEval-V:HumanEval-88.</span>
+                  <span style="font-weight: bold;">Figure 3: A sample problem from HumanEval-V: HumanEval-94.</span>
                 </p>
               </div>
               <div class="slide" style="min-width: 100%; flex-shrink: 0; display: flex; flex-direction: column; justify-content: center; align-items: center;">
                 <img src="./static/images/biweekly-contest-118-maximize-area-of-square-hole-in-grid.png" alt="showcase 3" style="max-width: 90%; max-height: 500px; object-fit: contain;">
                 <p style="text-align: center; color: #2c3e50; font-size: 1.1rem; margin-top: 1rem;">
-                <span style="font-weight: bold;">Figure 4: A sample problem from Algorithm.</span>
+                <span style="font-weight: bold;">Figure 4: A sample problem from Algorithm: weekly-contest-360-maximize-value-of-function-in-a-ball-passing-game.</span>
               </p>
+              </div>
+              <div class="slide" style="min-width: 100%; flex-shrink: 0; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <img src="./static/images/weekly-contest-369-minimum-equal-sum-of-two-arrays-after-replacing-zeros.png" alt="showcase 3" style="max-width: 90%; max-height: 500px; object-fit: contain;">
+                <p style="text-align: center; color: #2c3e50; font-size: 1.1rem; margin-top: 1rem;">
+                  <span style="font-weight: bold;">Figure 5: A sample problem from Algorithm: weekly-contest-369-minimum-equal-sum-of-two-arrays-after-replacing-zeros.</span>
+                </p>
               </div>
               <div class="slide" style="min-width: 100%; flex-shrink: 0; display: flex; flex-direction: column; justify-content: center; align-items: center;">
                 <img src="./static/images/3116. Kth Smallest Amount With Single Denomination Combination.png" alt="showcase 4" style="max-width: 90%; max-height: 500px; object-fit: contain;">
                 <p style="text-align: center; color: #2c3e50; font-size: 1.1rem; margin-top: 1rem;">
-                  <span style="font-weight: bold;">Figure 5: A sample problem from Math.</span>
+                  <span style="font-weight: bold;">Figure 6: A sample problem from Math: 3116. Kth Smallest Amount With Single Denomination Combination.</span>
+                </p>
+              </div>
+              <div class="slide" style="min-width: 100%; flex-shrink: 0; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <img src="./static/images/weekly-contest-378-find-longest-special-substring-that-occurs-thrice-ii.png" alt="showcase 4" style="max-width: 90%; max-height: 500px; object-fit: contain;">
+                <p style="text-align: center; color: #2c3e50; font-size: 1.1rem; margin-top: 1rem;">
+                  <span style="font-weight: bold;">Figure 7: A sample problem from Math: weekly-contest-378-find-longest-special-substring-that-occurs-thrice-ii.</span>
                 </p>
               </div>
             </div>
